@@ -1,6 +1,16 @@
-" Use the excellent Railscat theme by Jeff Kreeftmeijer (gVim-only)
-colorscheme railscat
-" Use 14pt Menlo
-set guifont=Menlo:h14
-" Better line-height
-set linespace=8
+" cd ~/work/dippa/kernelc/src/kernelc
+
+colorscheme antti
+set guifont=Inconsolata:h16
+" set lines=56 columns=120
+set guioptions+=ab
+set guioptions-=tT
+" set textwidth=104
+set visualbell
+
+hi MatchParen gui=underline guifg=red guibg=bg
+
+" CTRL-Z is :shell
+noremap <C-Z> :shell
+inoremap <C-Z> <C-O>:shell
+
