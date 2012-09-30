@@ -9,10 +9,7 @@ alias g="git"
 alias v="vim"
 alias o="open"
 alias oo="open ."
-
 alias l="ls -l"
-
-# List only directories
 alias lsd='ls -l | grep "^d"'
 
 # Git
