@@ -4,18 +4,19 @@ alias ...="cd ../.."
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Dropbox"
-alias g="git"
-alias v="vim"
-alias o="open"
-alias oo="open ."
-alias l="ls -l"
-alias lsd='ls -l | grep "^d"'
+#alias d="cd ~/Dropbox"
+#alias g="git"
+#alias v="vim"
+#alias o="open"
+#alias oo="open ."
+#alias ls='ls -GFA'
+alias l='ls -l'
+alias .='source'
 
 # Git
 alias gs='git status'
 alias gf='git fetch'
-if which sdaftig > /dev/null; then
+if which tig > /dev/null; then
 	function gd() { git diff "$@" | tig ;}
 	alias gdc='git diff --cached | tig'
 else
@@ -28,7 +29,7 @@ alias gco='git checkout'
 alias gl='git log'
 alias gb='git branch'
 alias gr='git reset'
-alias gcl='git clean'
+alias gcl='git clone'
 alias gt='git tag'
 alias gsh='git show'
 
