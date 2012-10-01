@@ -10,7 +10,7 @@ export EDITOR=vim
 
 function git_current_branch() {
 	ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-	echo " (${ref#refs/heads/})"
+	echo "[${ref#refs/heads/}] "
 }
 
 function collapse_pwd {
@@ -18,7 +18,7 @@ function collapse_pwd {
 }
 setopt prompt_subst
 
-export PROMPT='%~$(git_current_branch)%# '
+export PROMPT='$(git_current_branch)%~%# '
 
 ### misc
 
