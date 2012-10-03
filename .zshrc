@@ -4,7 +4,7 @@ export PATH=$PATH:$HOME/bin:/opt/androidsdk/platform-tools/
 
 ## aliases
 
-source .aliases
+source ~/.aliases
 
 ## environment
 
