@@ -1,12 +1,16 @@
+## path
+
+export PATH=$PATH:$HOME/bin:/opt/androidsdk/platform-tools/
+
 ## aliases
 
 source .aliases
 
-### environment
+## environment
 
 export EDITOR=vim
 
-### prompt
+## prompt
 
 function git_current_branch() {
 	ref=$(git symbolic-ref HEAD 2> /dev/null) || return
@@ -20,7 +24,7 @@ setopt prompt_subst
 
 export PROMPT='$(git_current_branch)%~%# '
 
-### misc
+## misc
 
 # Don't you zsh sniff my $EDITOR, please.
 bindkey -e
