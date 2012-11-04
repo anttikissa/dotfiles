@@ -101,7 +101,7 @@ au BufNewFile,BufRead *.bib set expandtab
 
 au Filetype yaml setlocal ai et sw=2 sts=2
 
-au BufNewFile,BufRead *.txt set formatoptions-=a
+au BufNewFile,BufRead *.txt set formatoptions-=a formatoptions+=t
 
 " Automagical coffeescript compilation
 " au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
