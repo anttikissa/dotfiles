@@ -1,6 +1,6 @@
 ## path
 
-export PATH=$PATH:$HOME/bin:/opt/androidsdk/platform-tools/
+export PATH=$PATH:$HOME/bin:/opt/androidsdk/platform-tools/:$HOME/work/z/bin
 
 ## aliases
 
