@@ -20,6 +20,7 @@ function git_current_branch() {
 function collapse_pwd {
 	echo $(pwd | sed -e "s,^$HOME,~,")
 }
+
 setopt prompt_subst
 
 export PROMPT='$(git_current_branch)%~%# '
@@ -31,4 +32,6 @@ bindkey -e
 
 # Set window title to hostname
 echo -ne "\e]1;`hostname`\a"
+
+cat ~/.todo
 
