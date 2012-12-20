@@ -33,5 +33,13 @@ bindkey -e
 # Set window title to hostname
 echo -ne "\e]1;`hostname`\a"
 
-cat ~/.todo
+if [ -r ~/.todo ]; then
+	cat ~/.todo
+else
+	for t in ~/.todo?; do
+		echo "[$t]:"
+		cat $t
+	done
+fi
+
 
