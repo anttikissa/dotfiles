@@ -23,7 +23,7 @@ function collapse_pwd {
 
 setopt prompt_subst
 
-export PROMPT='$(git_current_branch)%~%# '
+export PROMPT='$(git_current_branch)%m:%~%# '
 
 ## misc
 
