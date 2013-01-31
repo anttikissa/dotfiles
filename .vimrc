@@ -94,7 +94,7 @@ au BufNewFile,BufRead *.haml set sw=2 sts=2 et
 au! BufRead,BufNewFile *.vs,*.fs,*.glsl set filetype=glsl 
 
 au! BufRead,BufNewFile *.json setfiletype json 
-au BufNewFile,BufRead *.txt setlocal expandtab
+" au BufNewFile,BufRead *.txt setlocal expandtab
 au BufNewFile,BufRead *.tex setlocal expandtab
 au BufNewFile,BufRead *.bib setlocal expandtab
 " au BufNewFile,BufRead *.yml set ai et sw=2 sts=2 
