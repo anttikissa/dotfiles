@@ -1,6 +1,11 @@
 #!/bin/bash
 cd $(dirname $0)
 
+if [ ! -d .vim/bundle/vundle ]
+then
+	git clone https://github.com/gmarik/vundle.git .vim/bundle/vundle
+fi
+
 git pull
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~

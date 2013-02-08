@@ -1,3 +1,17 @@
+" Vundle
+
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'Valloric/YouCompleteMe'
+
+filetype plugin indent on
+
+
+" Options
+
 set tabstop=4
 set shiftwidth=4
 " set softtabstop=4
@@ -9,7 +23,7 @@ set modelines=5
 set number
 
 set list
-set listchars=tab:·\ ,extends:»,precedes:«
+set listchars=tab:Â·\ ,extends:Â»,precedes:Â«
 
 set hlsearch
 

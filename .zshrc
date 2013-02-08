@@ -1,11 +1,15 @@
 ## path
 
 # export PATH=$PATH:$HOME/bin:/opt/androidsdk/platform-tools/:$HOME/work/z/bin
-export PATH=$HOME/bin:$PATH:./node_modules/.bin
+export PATH=$HOME/bin:$PATH:./node_modules/.bin:~/code/play-2.1.0
 
 ## aliases
 
 source ~/.aliases
+if [ -f ~/.aliases.custom ]
+then
+	source ~/.aliases.custom
+fi
 
 ## environment
 
