@@ -32,6 +32,9 @@ export PROMPT='$(git_current_branch)%m:%~%# '
 
 ## misc
 
+# make things like "scp host.com:*.txt ." work
+unsetopt nomatch
+
 # Don't you zsh sniff my $EDITOR, please.
 bindkey -e
 
