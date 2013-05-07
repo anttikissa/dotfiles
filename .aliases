@@ -16,13 +16,8 @@ alias .='source'
 # Git
 alias gs='git status'
 alias gf='git fetch'
-if which tig > /dev/null; then
-	function gd() { git diff "$@" | tig ;}
-	alias gdc='git diff --cached | tig'
-else
-	alias gd='git diff'
-	alias gdc='git diff --cached'
-fi
+alias gd='git diff'
+alias gdc='git diff --cached'
 alias ga='git add'
 alias gc='git commit'
 alias gco='git checkout'
