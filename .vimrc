@@ -1,3 +1,15 @@
+" Vundle
+
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'Valloric/YouCompleteMe'
+
+filetype plugin indent on
+
+
 " Options
 
 set tabstop=4
@@ -94,6 +106,7 @@ au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead *.haml set sw=2 sts=2 et
 
 au! BufRead,BufNewFile *.vs,*.fs,*.glsl set filetype=glsl 
+au! BufRead,BufNewFile *.ejs set filetype=jst
 
 au! BufRead,BufNewFile *.json setfiletype json 
 " au BufNewFile,BufRead *.txt setlocal expandtab
