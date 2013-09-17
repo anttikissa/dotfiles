@@ -20,6 +20,8 @@ set shiftwidth=4
 set modeline
 set modelines=5
 
+set nofoldenable
+
 set number
 
 set list
