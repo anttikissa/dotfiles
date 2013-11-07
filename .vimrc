@@ -1,14 +1,11 @@
 " Vundle
-
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'Valloric/YouCompleteMe'
+" filetype off
+" set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
+" Bundle 'gmarik/vundle'
+" Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
-
 
 " Options
 
@@ -57,7 +54,7 @@ syntax on
 
 " persistent undo (vim 7.3)
 if has("persistent_undo")
-	set undodir=~/vimfiles/.vimundo
+	set undodir=~/.vim/.vimundo
 	set undofile
 	set undolevels=1000
 	set undoreload=10000

@@ -1,7 +1,7 @@
 ## path
 
 # export PATH=$PATH:$HOME/bin:/opt/androidsdk/platform-tools/:$HOME/work/z/bin
-export PATH=$HOME/bin:$PATH:./node_modules/.bin:~/code/play-2.1.0
+export PATH=$HOME/bin:$PATH:./node_modules/.bin:~/software/play-1.2.5
 
 ## aliases
 
@@ -14,6 +14,8 @@ fi
 ## environment
 
 export EDITOR=vim
+export JPDA_ADDRESS=8000
+export JPDA_TRANSPORT=dt_socket
 
 ## prompt
 
@@ -51,3 +53,5 @@ else
 fi
 
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
