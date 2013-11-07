@@ -57,7 +57,7 @@ syntax on
 
 " persistent undo (vim 7.3)
 if has("persistent_undo")
-	set undodir=~/vimfiles/.vimundo
+	set undodir=~/.vim/.vimundo
 	set undofile
 	set undolevels=1000
 	set undoreload=10000
