@@ -3,6 +3,10 @@
 # export PATH=$PATH:$HOME/bin:/opt/androidsdk/platform-tools/:$HOME/work/z/bin
 export PATH=$HOME/bin:$PATH:./node_modules/.bin:~/software/play-1.2.5
 
+# git autocompletion
+autoload -U compinit
+compinit
+
 ## aliases
 
 source ~/.aliases
