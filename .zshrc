@@ -3,7 +3,7 @@
 # export PATH=$PATH:$HOME/bin:/opt/androidsdk/platform-tools/:$HOME/work/z/bin
 export PATH=$HOME/bin:$PATH:./node_modules/.bin:~/software/play-1.2.5
 
-# git autocompletion
+# autocompletion
 autoload -U compinit
 compinit
 
@@ -23,18 +23,19 @@ export JPDA_TRANSPORT=dt_socket
 
 ## prompt
 
-function git_current_branch() {
-	ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-	echo "[${ref#refs/heads/}] "
+autoload -Uz vcs_info
+autoload -U colors && colors
+
+zstyle ':vcs_info:*' enable git
+precmd() {
+    vcs_info
 }
 
-function collapse_pwd {
-	echo $(pwd | sed -e "s,^$HOME,~,")
-}
+zstyle ':vcs_info:git*' formats "%{$fg[green]%}%b%m%u%c%{$reset_color%} "
+zstyle ':vcs_info:git*' actionformats "%{$fg[magenta]%}%b (%a)%m%u%c%{$reset_color%} "
 
 setopt prompt_subst
-
-export PROMPT='$(git_current_branch)%m:%~%# '
+export PROMPT='${vcs_info_msg_0_}%m:%~%# '
 
 ## misc
 
@@ -55,7 +56,3 @@ else
 		cat $t
 	done
 fi
-
-
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
