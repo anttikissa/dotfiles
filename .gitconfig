@@ -74,3 +74,5 @@
 	keeptemporaries = false
 	trustexitcode = false
 	keepbackup = false
+[push]
+	default = simple
