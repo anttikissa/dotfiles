@@ -70,9 +70,13 @@
 [user]
 	email = antti.sykari@gmail.com
 [mergetool "p4merge"]
-	cmd = p4merge $BASE $LOCAL $REMOTE $MERGED
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
 	keeptemporaries = false
 	trustexitcode = false
 	keepbackup = false
 [push]
 	default = simple
+[diff]
+	tool = p4mergetool
+[difftool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
