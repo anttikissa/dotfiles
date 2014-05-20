@@ -1,7 +1,7 @@
 ## path
 
 # export PATH=$PATH:$HOME/bin:/opt/androidsdk/platform-tools/:$HOME/work/z/bin
-export PATH=$HOME/bin:$PATH:./node_modules/.bin:~/software/play-1.2.5
+export PATH=$HOME/bin:$PATH:./node_modules/.bin:~/software/play-1.2.7
 
 # autocompletion
 autoload -U compinit
@@ -56,3 +56,9 @@ else
 		cat $t
 	done
 fi
+
+# NVM
+[ -s "/Users/antti/.nvm/nvm.sh" ] && . "/Users/antti/.nvm/nvm.sh" # This loads nvm
+
+source ~/.rvm/scripts/rvm
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
