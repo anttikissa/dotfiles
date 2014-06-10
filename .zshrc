@@ -1,7 +1,7 @@
 ## path
 
 # export PATH=$PATH:$HOME/bin:/opt/androidsdk/platform-tools/:$HOME/work/z/bin
-export PATH=$HOME/bin:$PATH:./node_modules/.bin:~/software/play-1.2.7
+export PATH=$HOME/bin:$PATH:./node_modules/.bin:~/node_modules/.bin
 
 # autocompletion
 autoload -U compinit
