@@ -1,0 +1,11 @@
+" use spaces for project in this directory
+au BufRead,BufNewFile,BufEnter ~/code/project/* setlocal et ts=4 sts=4 sw=4
+
+" remove trailing whitespace on save
+function TrimWhitespace()
+	mark `
+	:%s/\s\+$//e
+	normal ``
+endfunction
+autocmd BufWritePre * call TrimWhitespace()
+
