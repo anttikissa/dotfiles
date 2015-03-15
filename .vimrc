@@ -30,7 +30,7 @@ set formatoptions-=t
 
 set backspace=indent,eol,start
 
-set textwidth=80
+set textwidth=72
 
 set ruler
 set laststatus=2
