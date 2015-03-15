@@ -7,6 +7,8 @@
 
 filetype plugin indent on
 
+source ~/.vimrc.custom
+
 " Options
 
 set tabstop=4
