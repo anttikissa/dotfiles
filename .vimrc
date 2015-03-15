@@ -1,10 +1,3 @@
-" Vundle
-" filetype off
-" set rtp+=~/.vim/bundle/vundle/
-" call vundle#rc()
-" Bundle 'gmarik/vundle'
-" Bundle 'Valloric/YouCompleteMe'
-
 filetype plugin indent on
 
 source ~/.vimrc.custom
@@ -37,8 +30,8 @@ set textwidth=72
 set ruler
 set laststatus=2
 
-" au WinLeave * set nocursorline 
-" au WinEnter * set cursorline 
+" au WinLeave * set nocursorline
+" au WinEnter * set cursorline
 " set cursorline
 
 " Fix jslint plugin
@@ -89,7 +82,7 @@ hi ErrorMsg ctermbg=none ctermfg=red cterm=none
 hi Error ctermbg=none ctermfg=red cterm=underline
 hi WarningMsg ctermbg=none ctermfg=5
 hi SpecialKey cterm=none ctermfg=darkgrey ctermbg=none
-hi PMenuSel cterm=underline 
+hi PMenuSel cterm=underline
 hi PMenuThumb cterm=underline ctermbg=5
 hi PMenuSbar cterm=underline ctermbg=3
 
@@ -102,18 +95,28 @@ hi Visual cterm=underline,bold ctermbg=none
 
 " hi Normal ctermfg=7
 
+" Highlight trailing whitespace
+" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+" autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd InsertLeave * redraw!
+autocmd BufWinLeave * call clearmatches()
+
 " au BufNewFile,BufRead *.less set filetype=less sw=2 sts=2 et
 au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead *.haml set sw=2 sts=2 et
 
-au! BufRead,BufNewFile *.vs,*.fs,*.glsl set filetype=glsl 
+au! BufRead,BufNewFile *.vs,*.fs,*.glsl set filetype=glsl
 au! BufRead,BufNewFile *.ejs set filetype=jst
 
-au! BufRead,BufNewFile *.json setfiletype json 
+au! BufRead,BufNewFile *.json setfiletype json
 " au BufNewFile,BufRead *.txt setlocal expandtab
 au BufNewFile,BufRead *.tex setlocal expandtab
 au BufNewFile,BufRead *.bib setlocal expandtab
-" au BufNewFile,BufRead *.yml set ai et sw=2 sts=2 
+" au BufNewFile,BufRead *.yml set ai et sw=2 sts=2
 
 au Filetype yaml setlocal ai et sw=2 sts=2
 
