@@ -1,6 +1,5 @@
 ## path
 
-# export PATH=$PATH:$HOME/bin:/opt/androidsdk/platform-tools/:$HOME/work/z/bin
 export PATH=$HOME/bin:$PATH:./node_modules/.bin:~/node_modules/.bin
 
 # autocompletion
@@ -18,8 +17,6 @@ fi
 ## environment
 
 export EDITOR=vim
-export JPDA_ADDRESS=8000
-export JPDA_TRANSPORT=dt_socket
 
 ## prompt
 
@@ -63,4 +60,4 @@ fi
 source ~/.rvm/scripts/rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-# [ -s "/Users/antti/.scm_breeze/scm_breeze.sh" ] && source "/Users/antti/.scm_breeze/scm_breeze.sh"
+[ -s "/Users/antti/.scm_breeze/scm_breeze.sh" ] && source "/Users/antti/.scm_breeze/scm_breeze.sh"
