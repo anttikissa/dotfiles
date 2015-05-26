@@ -60,4 +60,7 @@ fi
 source ~/.rvm/scripts/rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-[ -s "/Users/antti/.scm_breeze/scm_breeze.sh" ] && source "/Users/antti/.scm_breeze/scm_breeze.sh"
+# [ -s "/Users/antti/.scm_breeze/scm_breeze.sh" ] && source "/Users/antti/.scm_breeze/scm_breeze.sh"
+
+eval "$(scmpuff init -s)"
+
