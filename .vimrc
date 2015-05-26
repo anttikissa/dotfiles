@@ -4,10 +4,25 @@ source ~/.vimrc.custom
 
 " Options
 
-set tabstop=4
-set shiftwidth=4
 " set softtabstop=4
 " set expandtab
+
+function Indent()
+	DetectIndent
+	" Fix anomalies
+	if &shiftwidth == 2
+		let &softtabstop = 2
+	endif
+	if &shiftwidth == 8
+		let &shiftwidth = 4
+	endif
+	" echo &shiftwidth
+	" echo &softtabstop
+	" This is the good default
+	set tabstop=4
+endfunction
+
+autocmd BufReadPost * call Indent()
 
 set modeline
 set modelines=5
@@ -89,43 +104,20 @@ hi PMenuSbar cterm=underline ctermbg=3
 " Trying something funky
 hi Visual cterm=underline,bold ctermbg=none
 
-" hi MatchParen ctermfg=red
-
-" TODO and lots of others, see :hi
-
-" hi Normal ctermfg=7
-
 " Highlight trailing whitespace
 " http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-" autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd InsertLeave * redraw!
 autocmd BufWinLeave * call clearmatches()
 
-" au BufNewFile,BufRead *.less set filetype=less sw=2 sts=2 et
 au BufNewFile,BufRead *.less set filetype=less
-au BufNewFile,BufRead *.haml set sw=2 sts=2 et
-
 au! BufRead,BufNewFile *.vs,*.fs,*.glsl set filetype=glsl
 au! BufRead,BufNewFile *.ejs set filetype=jst
-
 au! BufRead,BufNewFile *.json setfiletype json
-" au BufNewFile,BufRead *.txt setlocal expandtab
-au BufNewFile,BufRead *.tex setlocal expandtab
-au BufNewFile,BufRead *.bib setlocal expandtab
-" au BufNewFile,BufRead *.yml set ai et sw=2 sts=2
-
-au Filetype yaml setlocal ai et sw=2 sts=2
-
 au BufNewFile,BufRead *.txt set formatoptions-=a formatoptions+=t
-
-" Automagical coffeescript compilation
-" au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
-
-command -nargs=1 C CoffeeCompile | :<args>
 
 au Filetype coffeescript set autoindent
 set autoindent
