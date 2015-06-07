@@ -4,21 +4,25 @@ source ~/.vimrc.custom
 
 " Options
 
-" set softtabstop=4
-" set expandtab
+set tabstop=4
 
 function Indent()
 	DetectIndent
-	" Fix anomalies
+
+	" DetectIndent is nice, but often it gives silly values.
+	" Here are the workarounds:
 	if &shiftwidth == 2
 		let &softtabstop = 2
 	endif
 	if &shiftwidth == 8
 		let &shiftwidth = 4
 	endif
+	if &expandtab
+		let &softtabstop = &shiftwidth
+	endif
 	" echo &shiftwidth
 	" echo &softtabstop
-	" This is the good default
+
 	set tabstop=4
 endfunction
 
