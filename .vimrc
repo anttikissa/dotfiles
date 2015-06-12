@@ -1,6 +1,14 @@
 filetype plugin indent on
 
-source ~/.vimrc.custom
+" source ~/.vimrc.custom
+
+" remove trailing whitespace on save
+function TrimWhitespace()
+	mark `
+	:%s/\s\+$//e
+	normal ``
+endfunction
+autocmd BufWritePre * call TrimWhitespace()
 
 " Options
 
