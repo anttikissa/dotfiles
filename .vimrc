@@ -25,9 +25,13 @@ function Indent()
 	if &shiftwidth == 8
 		let &shiftwidth = 4
 	endif
+	if &shiftwidth == 1
+		let &shiftwidth = 4
+	endif
 	if &expandtab
 		let &softtabstop = &shiftwidth
 	endif
+
 	" echo &shiftwidth
 	" echo &softtabstop
 
