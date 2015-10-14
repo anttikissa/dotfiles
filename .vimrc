@@ -32,9 +32,6 @@ function Indent()
 		let &softtabstop = &shiftwidth
 	endif
 
-	" echo &shiftwidth
-	" echo &softtabstop
-
 	set tabstop=4
 endfunction
 
@@ -134,6 +131,8 @@ au! BufRead,BufNewFile *.vs,*.fs,*.glsl set filetype=glsl
 au! BufRead,BufNewFile *.ejs set filetype=jst
 au! BufRead,BufNewFile *.json setfiletype json
 au BufNewFile,BufRead *.txt set formatoptions-=a formatoptions+=t
+
+let g:omni_sql_no_default_maps = 1
 
 au Filetype coffeescript set autoindent
 set autoindent
