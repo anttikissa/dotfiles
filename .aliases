@@ -30,7 +30,7 @@ alias gcl='git clone'
 #alias gt='git tag'
 alias gsh='git show'
 # 'git show summary' - good for summarizing renames in a commit
-alias gss='git show --summary --find-renames --find-copies'
+alias gss='git show --summary --find-renames --find-copies-harder'
 
 # Always use color output for `ls`
 if [[ "$OSTYPE" =~ ^darwin ]]; then
