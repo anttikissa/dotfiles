@@ -2,6 +2,10 @@
 
 export PATH=$HOME/bin:$PATH:./node_modules/.bin:~/node_modules/.bin
 
+# Save history
+SAVEHIST=1000000
+HISTFILE=~/.zsh_history
+
 # autocompletion
 autoload -U compinit
 compinit
