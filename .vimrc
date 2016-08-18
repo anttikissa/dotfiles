@@ -1,4 +1,5 @@
-filetype plugin indent on
+" THIS was the abomination that broke autoindenting on JS files
+" filetype plugin indent on
 
 " source ~/.vimrc.custom
 
@@ -13,29 +14,7 @@ autocmd BufWritePre * call TrimWhitespace()
 " Options
 
 set tabstop=4
-
-function Indent()
-	DetectIndent
-
-	" DetectIndent is nice, but often it gives silly values.
-	" Here are the workarounds:
-	if &shiftwidth == 2
-		let &softtabstop = 2
-	endif
-	if &shiftwidth == 8
-		let &shiftwidth = 4
-	endif
-	if &shiftwidth == 1
-		let &shiftwidth = 4
-	endif
-	if &expandtab
-		let &softtabstop = &shiftwidth
-	endif
-
-	set tabstop=4
-endfunction
-
-autocmd BufReadPost * call Indent()
+set shiftwidth=4
 
 set modeline
 set modelines=5
