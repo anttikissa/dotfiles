@@ -69,6 +69,7 @@
 
 [user]
 	email = antti.sykari@gmail.com
+	name = Antti Kissaniemi
 [mergetool "p4merge"]
 	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
 	keeptemporaries = false
@@ -88,3 +89,4 @@
 	trustExitCode = true
 [pull]
 	default = current
+	rebase = true
