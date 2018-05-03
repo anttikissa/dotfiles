@@ -1,3 +1,5 @@
+alias node="node --experimental-repl-await"
+
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."

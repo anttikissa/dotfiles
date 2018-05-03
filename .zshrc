@@ -1,3 +1,9 @@
+# Local custom conguration
+if [ -f ~/.zshrc.local ]
+then
+	source ~/.zshrc.local
+fi
+
 ## path
 
 export PATH=$HOME/bin:$PATH:./node_modules/.bin:~/node_modules/.bin
@@ -59,10 +65,10 @@ else
 fi
 
 # NVM
-[ -s "/Users/antti/.nvm/nvm.sh" ] && . "/Users/antti/.nvm/nvm.sh" # This loads nvm
+# [ -s "/Users/antti/.nvm/nvm.sh" ] && . "/Users/antti/.nvm/nvm.sh" # This loads nvm
 
-source ~/.rvm/scripts/rvm
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# source ~/.rvm/scripts/rvm
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # [ -s "/Users/antti/.scm_breeze/scm_breeze.sh" ] && source "/Users/antti/.scm_breeze/scm_breeze.sh"
 
