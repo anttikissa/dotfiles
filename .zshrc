@@ -58,7 +58,7 @@ echo -ne "\e]1;`hostname`\a"
 if [ -r ~/.todo ]; then
 	cat ~/.todo
 else
-	for t in ~/.todo?; do
+	for t in ~/.todo?*; do
 		echo "[$t]:"
 		cat $t
 	done
