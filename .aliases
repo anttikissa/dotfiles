@@ -1,5 +1,5 @@
 alias node="node --experimental-repl-await"
-alias code="code-insiders"
+# alias code="code-insiders"
 
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
@@ -20,6 +20,9 @@ alias gr='git reset'
 alias gcl='git clone'
 alias gt='git tag'
 alias gsh='git show'
+
+alias pg-start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias pg-stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 
 # Always use color output for `ls`
 if [[ "$OSTYPE" =~ ^darwin ]]; then
@@ -99,3 +102,4 @@ done
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 10'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
+
