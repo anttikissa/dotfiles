@@ -4,6 +4,8 @@ then
 	source ~/.zshrc.local
 fi
 
+tabs -4
+
 ## path
 
 export PATH=$HOME/bin:$PATH:./node_modules/.bin:~/node_modules/.bin
