@@ -4,7 +4,10 @@ then
 	source ~/.zshrc.local
 fi
 
-tabs -4
+# Something M1
+eval $(/opt/homebrew/bin/brew shellenv)
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
+alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
 
 ## path
 
