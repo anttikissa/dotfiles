@@ -148,3 +148,7 @@ else
 	let &t_EI = "\<Esc>]50;CursorShape=2\x7"
 endif
 
+autocmd BufReadPost *
+  \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+  \ |   exe "normal! g`\""
+  \ | endif

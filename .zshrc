@@ -4,6 +4,8 @@ then
 	source ~/.zshrc.local
 fi
 
+PS1='%(?..%F{1})%(!.#.;)%f '
+
 # Something M1
 eval $(/opt/homebrew/bin/brew shellenv)
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
